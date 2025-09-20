@@ -1,7 +1,10 @@
-# environment variables
+# Environment files
 .env
 Airline_Backend/.env
 
-# dependencies
+# Node modules
 node_modules/
 Airline_Backend/node_modules/
+
+# Optional: Sequelize config
+Airline_Backend/src/config/config.json
