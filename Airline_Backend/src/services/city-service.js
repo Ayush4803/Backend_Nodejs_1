@@ -2,6 +2,11 @@ const {CityRepository}= require('../repository/index')
 
 
 class cityService{
+
+constructor(){
+    this.CityRepository=new CityRepository();
+}
+
  async createCity(data){
   try {
     const city=await this.CityRepository.createCity(data)
