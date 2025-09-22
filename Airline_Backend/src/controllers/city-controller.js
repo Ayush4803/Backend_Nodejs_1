@@ -85,7 +85,7 @@ console.log(error)
 
     const getallCities=async(req,res)=>{
         try {
-            const cities=await cityService.getallCities()
+            const cities=await cityService.getallCities(req.query)
              return res.status(201).json({
             data:cities ,
             success: true,
