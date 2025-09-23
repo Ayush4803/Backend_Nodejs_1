@@ -11,20 +11,27 @@ module.exports = {
       },
       modelNumber: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
       },
       capacity: {
         type: Sequelize.INTEGER,
-        allowNull:false,
-        defaultValue:150
+        allowNull: false,
+        defaultValue: 150
+      },
+      type: {   // ✅ Add this column
+        type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: 'Commercial'  // optional default
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       }
     });
   },

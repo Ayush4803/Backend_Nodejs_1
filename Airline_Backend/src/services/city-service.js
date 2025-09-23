@@ -1,4 +1,4 @@
-const { CityRepository } = require('../repository/index');
+const CityRepository = require('../repository/city-repository');
 
 class CityService {
     constructor() {
@@ -6,51 +6,24 @@ class CityService {
     }
 
     async createCity(data) {
-        try {
-            // Pass the string instead of object
-            const city = await this.cityRepository.createCity(data.name);
-            return city;
-        } catch (error) {
-            console.log("Something went wrong in service layer");
-            throw error; // throw original error
-        }
+        if (!data.name) throw new Error("City name is required");
+        return await this.cityRepository.createCity(data.name);
     }
 
     async deleteCity(cityId) {
-        try {
-            return await this.cityRepository.deleteCity(cityId);
-        } catch (error) {
-            console.log("Something went wrong in service layer");
-            throw error;
-        }
+        return await this.cityRepository.deleteCity(cityId);
     }
 
     async updateCity(cityId, data) {
-        try {
-            return await this.cityRepository.updateCity(cityId, data);
-        } catch (error) {
-            console.log("Something went wrong in service layer");
-            throw error;
-        }
+        return await this.cityRepository.updateCity(cityId, data);
     }
 
     async getCity(cityId) {
-        try {
-            return await this.cityRepository.getCity(cityId);
-        } catch (error) {
-            console.log("Something went wrong in service layer");
-            throw error;
-        }
+        return await this.cityRepository.getCity(cityId);
     }
 
-    async getallCities(filter){
-        try {
-            const cities=await this.cityRepository.getallCities({name:filter.name});
-            return cities;
-        } catch (error) {
-             console.log("Something went wrong in service layer");
-            throw error;
-        }
+    async getAllCities(filter) {
+        return await this.cityRepository.getAllCities(filter);
     }
 }
 
