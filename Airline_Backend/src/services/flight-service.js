@@ -28,6 +28,14 @@ class FlightService {
             throw error; // propagate the original error
         }
     }
+
+
+     // other CRUD methods can be added here
+
+    //getFlight
+
+    
+    //getAllFlight
 }
 
 module.exports = FlightService;

@@ -12,6 +12,11 @@ class FlightRepository {
     }
 
     // other CRUD methods can be added here
+
+    //getFlight
+
+    
+    //getAllFlight
 }
 
 module.exports = FlightRepository;
