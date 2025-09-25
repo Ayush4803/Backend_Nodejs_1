@@ -1,71 +1,65 @@
-✈️ Airline Backend
+# ✈️ Airline Backend
 
-A beginner-friendly Airline Management Backend built with Node.js, Express, MySQL, and Sequelize ORM.
-This project helps manage cities, airports, flights, and bookings in a structured way.
+A beginner-friendly **Airline Management Backend** built with **Node.js**, **Express**, **MySQL**, and **Sequelize ORM**.  
+This project helps manage **cities, airports, flights, and bookings** in a structured way.
 
-📖 Table of Contents
+---
 
-✨ Overview
+## 📖 Table of Contents
+- [✨ Overview](#-overview)
+- [🔥 Features](#-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [⚡ Setup & Installation](#-setup--installation)
 
-🔥 Features
+---
 
-🛠 Tech Stack
+## ✨ Overview
 
-⚡ Setup & Installation
+The **Airline Backend** is designed to simulate an airline management system where you can:
 
-🗄 Database Models
+- 🏙 Create and manage **cities & airports**  
+- ✈️ Add and schedule **flights**  
+- 🎟 Book tickets for **passengers**  
+- 📅 Fetch **flight schedules** easily  
 
-📡 API Endpoints
+This project is perfect for **beginners** learning Node.js, MySQL, and Sequelize who want to practice **backend development** with real-world use cases.
 
-🤝 Contributing
+---
 
-📜 License
+## 🔥 Features
 
-✨ Overview
+✅ Manage **Cities** (add, update, delete)  
+✅ Manage **Airports** (link airports to cities)  
+✅ Manage **Flights** (schedule, update, delete)  
+✅ **Book flights** for passengers  
+✅ Fetch **flight schedules & details**
 
-The Airline Backend is designed to simulate an airline management system where you can:
+---
 
-Create and manage cities & airports
+## 🛠 Tech Stack
 
-Add and schedule flights
+- **Node.js** – Runtime environment  
+- **Express.js** – Backend framework  
+- **MySQL** – Relational database  
+- **Sequelize ORM** – Database abstraction  
+- **dotenv** – Manage environment variables  
+- **body-parser** – Parse incoming requests  
+- **Nodemon** – Auto-restart server in dev mode  
 
-Book tickets for passengers
+---
 
-Fetch flight schedules easily
+## ⚡ Setup & Installation
 
-This project is perfect for beginners to Node.js + MySQL + Sequelize who want to practice backend development with real-world use cases.
-
-🔥 Features
-
-✅ Manage Cities (add, update, delete)
-✅ Manage Airports (link airports to cities)
-✅ Manage Flights (schedule, update, delete flights)
-✅ Book flights for passengers
-✅ Fetch flight schedules & details
-
-🛠 Tech Stack
-
-Node.js – Runtime environment
-
-Express.js – Backend framework
-
-MySQL – Relational database
-
-Sequelize ORM – Database abstraction
-
-dotenv – Manage environment variables
-
-body-parser – Parse incoming requests
-
-Nodemon – Auto-restart server in dev mode
-
-⚡ Setup & Installation
-1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/your-username/airline-backend.git
 cd airline-backend
+```
 
 2️⃣ Install Dependencies
+```bash
 npm install
+```
 
 3️⃣ Configure Environment Variables
 
@@ -81,66 +75,39 @@ DB_DIALECT=mysql
 4️⃣ Setup Database
 
 Make sure MySQL is running, then run migrations:
-
+```bash
 npx sequelize db:create
 npx sequelize db:migrate
-
+```
 5️⃣ Start the Server
+```bash
 npm run dev
+```
+Server will start at 👉 http://localhost:wxyz
 
+# 🗄 Database Models
 
-Server will start at 👉 http://localhost:3000
+- City → (id, name)
+- Airport → (id, name, cityId)
+- Flight → (id, flightNumber, departure, arrival, time, price)
+- Booking → (id, flightId, passengerName, seatNumber)
 
-🗄 Database Models
+# 🤝 Contributing
 
-City → (id, name)
+- Contributions are always welcome! 🚀
 
-Airport → (id, name, cityId)
+- Fork the repo
 
-Flight → (id, flightNumber, departure, arrival, time, price)
+- Create a new branch (feature/your-feature)
 
-Booking → (id, flightId, passengerName, seatNumber)
+- Commit changes
 
-📡 API Endpoints
-🏙 Cities
+- Push to your branch
 
-POST /cities → Add a new city
+- Submit a Pull Request
 
-GET /cities → Fetch all cities
-
-PUT /cities/:id → Update a city
-
-DELETE /cities/:id → Delete a city
-
-🛫 Airports
-
-POST /airports → Add a new airport
-
-GET /airports → Fetch all airports
-
-✈ Flights
-
-POST /flights → Schedule a flight
-
-GET /flights → Get all flights
-
-PUT /flights/:id → Update flight details
-
-DELETE /flights/:id → Delete a flight
-
-🎟 Bookings
-
-POST /bookings → Book a ticket
-
-GET /bookings/:id → Get booking details
-
-🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork this repo, create a new branch, and submit a pull request.
-
-📜 License
+# 📜 License
 
 This project is licensed under the MIT License.
 
-🌟 If you like this project, don’t forget to star the repo ⭐ on GitHub!
+# 🌟 If you like this project, don’t forget to star ⭐ the repo on GitHub!
