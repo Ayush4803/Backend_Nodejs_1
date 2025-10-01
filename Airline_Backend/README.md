@@ -40,7 +40,7 @@ This project is perfect for **beginners** learning Node.js, MySQL, and Sequelize
 
 - **Node.js** – Runtime environment  
 - **Express.js** – Backend framework  
-- **MySQL** – Relational database  
+- **MySQL2** – Relational database  
 - **Sequelize ORM** – Database abstraction  
 - **dotenv** – Manage environment variables  
 - **body-parser** – Parse incoming requests  
